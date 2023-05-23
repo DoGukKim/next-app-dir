@@ -1,4 +1,6 @@
-import '@/app/styles/globals.css'
+import '@/styles/globals.css'
+
+import GlobalNav from '@/ui/global-nav'
 
 export const metadata = {
   title: 'hla',
@@ -12,7 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <header>
+          <GlobalNav />
+        </header>
+        {children}
+      </body>
     </html>
   )
 }
