@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 
-import GlobalNav from '@/ui/global-nav'
+import GlobalNav from '@/ui/global-nav/nav'
 
 export const metadata = {
   title: 'hla',
