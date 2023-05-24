@@ -1,6 +1,7 @@
-import { notFound } from 'next/navigation'
-import { getPosts } from '@/lib/get-posts'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
+
+import { getPosts } from '@/lib/get-posts'
 
 export default async function Blog() {
   const posts = await getPosts()

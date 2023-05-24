@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 
+import { font } from '@/lib/fonts'
 import GlobalNav from '@/ui/global-nav/nav'
 
 export const metadata = {
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={`${font.className}`}>
       <body>
         <header>
           <GlobalNav />
