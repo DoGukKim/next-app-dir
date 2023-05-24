@@ -1,5 +1,6 @@
-import { getPosts } from '@/lib/get-posts'
 import { notFound } from 'next/navigation'
+import { getPosts } from '@/lib/get-posts'
+import Link from 'next/link'
 
 export default async function Blog() {
   const posts = await getPosts()
@@ -8,9 +9,12 @@ export default async function Blog() {
 
   return (
     <main>
-      <h1>blog page</h1>
-      {posts.map((i) => (
-        <p key={i.title}>{i.description}</p>
+      <h1>All posts</h1>
+
+      {posts.map((post) => (
+        <Link key={post.title} href={`/blog/${post.slug}`}>
+          {post.title}
+        </Link>
       ))}
     </main>
   )
